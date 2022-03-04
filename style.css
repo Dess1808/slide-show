@@ -1,10 +1,81 @@
-*{
-    box-sizing: border-box;
+.carousel{
+    position: relative;
+    height: 600px;
+    width: 60%;
+    margin: 0 auto;
 }
 
-.slideshow-container{
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+.carousel-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*encaixar a img*/
 }
+
+.carousel-track-container{
+    background: lightgreen;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-track{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.carousel-slide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.carousel-button img{
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0, .3);
+    padding: 10px;
+}
+
+.carousel-button--left{
+    left: -80px;
+}
+
+.carousel-button--right{
+    right: -80px;
+}
+
+.carousel-nav{
+    /*background: pink;*/
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel-indicator{
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0,0,0,.3);
+    margin: 0 12px;
+}
+
+.carousel-indicator.current-slide{
+    background: rgba(0,0,0,.75);
+}
+
 
